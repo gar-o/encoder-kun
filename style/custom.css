@@ -1,0 +1,200 @@
+body {
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark body {
+    background-color: #1f2937;
+    /* gray-800 */
+    color: #f3f4f6;
+    /* gray-100 */
+}
+
+.dark .bg-white {
+    background-color: #374151;
+    /* gray-700 */
+}
+
+.dark .bg-gray-50 {
+    background-color: #374151;
+    /* gray-700 */
+}
+
+.dark .bg-gray-100 {
+    background-color: #4b5563;
+    /* gray-600 */
+}
+
+.dark .text-gray-700 {
+    color: #d1d5db;
+    /* gray-300 */
+}
+
+.dark .text-gray-800 {
+    color: #f3f4f6;
+    /* gray-100 */
+}
+
+.dark .text-gray-900 {
+    color: #ffffff;
+    /* white */
+}
+
+.dark .border-gray-300 {
+    border-color: #4b5563;
+    /* gray-600 */
+}
+
+.dark .hover\:bg-gray-200:hover {
+    background-color: #4b5563;
+    /* gray-600 */
+}
+
+.dark .ring-gray-300 {
+    ring-color: #4b5563;
+    /* gray-600 */
+}
+
+.dark .placeholder-gray-400::placeholder {
+    color: #9ca3af;
+    /* gray-400 */
+}
+
+.dark .hover\:bg-indigo-700:hover {
+    background-color: #4338ca;
+    /* indigo-700 */
+}
+
+.dark .hover\:bg-red-700:hover {
+    background-color: #991b1b;
+    /* red-700 */
+}
+
+.dark .hover\:bg-green-700:hover {
+    background-color: #047857;
+    /* green-700 */
+}
+
+.dark .hover\:bg-yellow-500:hover {
+    background-color: #ca8a04;
+    /* yellow-500 */
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -70px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* カスタムスクロールバー (ダークモード対応) */
+textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+textarea::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.dark textarea::-webkit-scrollbar-track {
+    background: #4b5563;
+    /* gray-600 */
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.dark textarea::-webkit-scrollbar-thumb {
+    background: #6b7280;
+    /* gray-500 */
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.dark textarea::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+    /* gray-400 */
+}
+
+#detectedCharsList li {
+    padding: 8px;
+    border-bottom: 1px solid #e5e7eb;
+    /* gray-200 */
+}
+
+.dark #detectedCharsList li {
+    border-bottom: 1px solid #4b5563;
+    /* gray-600 */
+}
+
+#detectedCharsList li:last-child {
+    border-bottom: none;
+}
+
+/* Message Box Styling */
+#messageBox {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, bottom 0.5s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#messageBox.show {
+    opacity: 1;
+    bottom: 40px;
+}
+
+#messageBox.success {
+    background-color: #10b981;
+    /* green-500 */
+    color: white;
+}
+
+#messageBox.error {
+    background-color: #ef4444;
+    /* red-500 */
+    color: white;
+}
